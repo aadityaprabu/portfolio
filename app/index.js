@@ -1,12 +1,16 @@
 require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 const app = express();
-const PORT = 3001;
-//  process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 // Simple route
 app.get("/", (req, res) => {
-  res.send("✅ Express server is running!");
+  const data = {
+    status: "✅ Express server is running!",
+  };
+  res.json(data);
 });
 
 // Test API endpoint
