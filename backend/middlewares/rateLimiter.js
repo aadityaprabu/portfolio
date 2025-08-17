@@ -13,6 +13,12 @@ const redisHost = process.env.REDIS_HOST || "localhost";
 const redisPort = process.env.REDIS_PORT || 6379;
 const redisPassword = process.env.REDIS_PASSWORD || undefined;
 
+console.log("Redis configuration:", {
+  host: redisHost,
+  port: redisPort,
+  password: redisPassword ? "******" : undefined,
+});
+
 const redisClient = new Redis({
   host: redisHost,
   port: redisPort,

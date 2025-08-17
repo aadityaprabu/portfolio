@@ -6,9 +6,11 @@ const express = require("express");
 const rateLimiterMiddleware = require("./middlewares/rateLimiter");
 const groqService = require("./services/groq");
 
-const port = process.env.BACKEND_PORT || 3000;
+const port = process.env.BACKEND_PORT || undefined;
 const env = process.env.ENV || "UNSET";
+
 console.log(`Environment: ${env}`);
+console.log(`Backend port: ${port}`);
 
 const app = express();
 app.use(cors());
@@ -35,5 +37,5 @@ app.get("/ping", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port} blablabla`);
+  console.log(`Server running on port ${port}`);
 });
