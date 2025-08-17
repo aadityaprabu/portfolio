@@ -1,24 +1,34 @@
-require("dotenv").config();
-const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
+
 const express = require("express");
+const rateLimiterMiddleware = require("./middlewares/rateLimiter");
+const groqService = require("./services/groq");
+
+const port = process.env.PORT || 3000;
+const env = process.env.ENV || "UNSET";
+console.log(`Environment: ${env}`);
+
 const app = express();
+app.set("trust proxy", true);
+app.use(express.json());
 
-const PORT = process.env.PORT;
-
-app.use(cors());
-// Simple route
-app.get("/", (req, res) => {
-  const data = {
-    status: "✅ Express server is running!",
-  };
-  res.json(data);
+app.use(rateLimiterMiddleware);
+app.post("/chat", async (req, res) => {
+  try {
+    const body = req.body;
+    const message = {
+      role: "user",
+      content: body.message,
+    };
+    const reply = await groqService(message);
+    res.json({ reply: reply });
+  } catch (error) {
+    console.error("Error in chat controller:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
-// Test API endpoint
-app.get("/api/hello", (req, res) => {
-  res.json({ message: "Hello from Express!", time: new Date().toISOString() });
-});
-
-app.listen(PORT, () => {
-  console.log(`Server started on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
 });

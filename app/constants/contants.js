@@ -1,0 +1,14 @@
+const RATELIMIT_VISITOR_ID = "RATELIMIT_VISITOR_ID";
+const RATELIMIT_IP_UA = "RATELIMIT_IP_UA";
+const RATELIMIT_IP = "RATELIMIT_IP";
+const FINGERPRINT_ID = "x-fingerprint-id";
+const USER_AGENT = "user-agent";
+const IP = "ip";
+module.exports = {
+  RATELIMIT_VISITOR_ID,
+  RATELIMIT_IP_UA,
+  RATELIMIT_IP,
+  FINGERPRINT_ID,
+  USER_AGENT,
+  IP,
+};
