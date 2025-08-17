@@ -1,0 +1,152 @@
+{
+  "personal": {
+    "fullName": "Aaditya Prabu K",
+    "tagline": "Aspiring Developer | Artist | Innovator",
+    "location": "Chennai, India",
+    "email": "aaditya.prabu@gmail.com",
+    "website": "https://aadityaprabu.github.io",
+    "social": {
+      "github": "https://github.com/Aadityaprabu002",
+      "linkedin": "https://www.linkedin.com/in/aaditya-prabu-k",
+      "instagram": "https://www.instagram.com/aadi_try_art",
+      "youtube": null
+    }
+  },
+  "education": [
+    {
+      "level": "High School",
+      "board": "CBSE",
+      "institution": "Srimathi Sundaravalli Memorial School, Chromepet",
+      "location": "Chennai, India",
+      "dateStart": "2017-04",
+      "dateEnd": "2020-04",
+      "percentage": "95.4%"
+    },
+    {
+      "level": "Under Graduate",
+      "degree": "Bachelor's in Information Technology",
+      "institution": "College of Engineering, Guindy, Anna University",
+      "location": "Chennai, India",
+      "dateStart": "2020-04",
+      "dateEnd": "2024-04",
+      "cgpa": "8.49"
+    }
+  ],
+
+  "internships": [
+    {
+      "title": "Application Developer Intern",
+      "company": "IDFC FIRST Bank Limited",
+      "location": "Chennai, India",
+      "dateStart": "2024-01",
+      "dateEnd": "2024-06",
+      "description": "Gained hands-on experience in test-driven development with Golang and ReactJS. Participated in simulated team meetings and discussions, conducted seminars, and led knowledge transfer and brain refresher sessions. Contributed to the development of an anomaly detection system for identifying potential fraudulent transactions using clustering and decision tree-based machine learning models."
+    },
+    {
+      "title": "Application Developer Intern",
+      "company": "Pavartha Software Private Limited",
+      "location": "Chennai, India",
+      "dateStart": "2023-06",
+      "dateEnd": "2023-07",
+      "description": "Developed a cross-platform mobile application using Ionic Angular, enabling users to seamlessly retrieve and view real-time sunrise and sunset timings based on their current or selected location."
+    }
+  ],
+  "workExperience": [
+    {
+      "title": "Application Developer",
+      "company": "IDFC FIRST Bank Limited",
+      "squad": "Fraud Risk Management",
+      "location": "Chennai, India",
+      "dateStart": "2024-07",
+      "dateEnd": "Present",
+      "description": "Currently working on Project Optimus, a web and mobile banking application, with a focus on building rule engines, and tracking and blocking malicious activities to enhance system security. Developing machine learning systems to detect anomalies in customer behavior, automating scripts for generating daily and monthly rule breach reports, archiving data from mongo to S3, and creating proof of concepts to introduce and validate new ideas. Current tech stack: Python, ReactJS, NodeJS, AWS, Golang."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Representation of IT Department for NAAC evaluation",
+      "category": "Academic",
+      "date": "2023-06",
+      "level": "Under Graduate"
+    },
+    {
+      "title": "Published a tool in Cache'21 IT Department Tech magazine",
+      "category": "Publication",
+      "date": "2021-05",
+      "level": "Under Graduate"
+    },
+    {
+      "title": "First Place in VYUHA '21 Blank Coding",
+      "category": "Competition",
+      "date": "2021-05",
+      "level": "Under Graduate"
+    },
+    {
+      "title": "Third Place in I++ '21 · OLPC and OSPC",
+      "category": "Competition",
+      "date": "2021-05",
+      "level": "Under Graduate"
+    },
+    {
+      "title": "Final year class topper",
+      "category": "Academic",
+      "date": "2020-04",
+      "level": "High School"
+    },
+    {
+      "title": "Overall 10th rank",
+      "category": "Academic",
+      "date": "2020-04",
+      "level": "High School"
+    }
+  ],
+  "positionsOfResponsibilities": [
+    {
+      "role": "Head of events",
+      "organization": "Anna University Student Entrepreneurship Club",
+      "description": "Managed and led a team of 100 for organizing  South India's largest collegiate entrepreneurial fest - ”ENANTRA” .",
+      "dateStart": "2023-04",
+      "dateEnd": "2024-04"
+    },
+    {
+      "role": "Team Leader",
+      "organization": "Nation Service Scheme, Unit 1, Anna University",
+      "description": "Led initiatives like blood donation camps, orphanage visits, and community activities",
+      "dateStart": "2023-04",
+      "dateEnd": "2024-04"
+    },
+    {
+      "role": "Class Representative",
+      "organization": "It department, Anna University",
+      "description": "Helped to facilitate classrooms, assignment submissions, mitigate queries between students and faculty.",
+      "dateStart": "2023-04",
+      "dateEnd": "2024-04"
+    },
+    {
+      "role": "Associate Head of events",
+      "organization": "Anna University Student Entrepreneurship Club",
+      "description": "Organized events, workshops and entrepreneurial speech sessions.",
+      "dateStart": "2022-03",
+      "dateEnd": "2023-03"
+    },
+    {
+      "role": "Class Representative",
+      "organization": "Srimathi Sundaravalli Memorial School, Chromepet",
+      "description": "Represented the class in school meetings and events.",
+      "dateStart": "2019-03",
+      "dateEnd": "2020-03"
+    },
+    {
+      "role": "Arts and decoration incharge",
+      "organization": "Srimathi Sundaravalli Memorial School, Chromepet",
+      "description": "To charge of making artwork, organizing, decorating school events",
+      "dateStart": "2018-01",
+      "dateEnd": "2020-01"
+    }
+  ],
+  "wittyFallbacks": {
+    "publications": "Currently brewing ideas hotter than my coffee — papers coming soon.",
+    "youtube": "No channel yet, but I promise my videos will have fewer ads than YouTube Premium.",
+    "missingData": "Either I haven't done it yet, or it's so classified even the LLM can't access it."
+  }
+}

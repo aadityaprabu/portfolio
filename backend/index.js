@@ -1,4 +1,5 @@
 const dotenv = require("dotenv");
+const cors = require("cors");
 dotenv.config();
 
 const express = require("express");
@@ -10,6 +11,7 @@ const env = process.env.ENV || "UNSET";
 console.log(`Environment: ${env}`);
 
 const app = express();
+app.use(cors());
 app.set("trust proxy", true);
 app.use(express.json());
 
@@ -33,5 +35,5 @@ app.get("/ping", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${port} blablabla`);
 });
