@@ -9,8 +9,6 @@ services:
       - "3000:3000"
     networks:
       - portfolio
-    depends_on:
-      - redis
     volumes:
       - ./backend:/usr/src/app
 
