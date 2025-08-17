@@ -6,7 +6,7 @@ const express = require("express");
 const rateLimiterMiddleware = require("./middlewares/rateLimiter");
 const groqService = require("./services/groq");
 
-const port = process.env.PORT || 3000;
+const port = process.env.BACKEND_PORT || 3000;
 const env = process.env.ENV || "UNSET";
 console.log(`Environment: ${env}`);
 
