@@ -19,7 +19,6 @@ build:
 run:
 	docker run -d -p $(PORT):$(PORT) --name $(IMAGE_NAME) $(IMAGE_NAME)
 
-# Stop and remove container
 stop:
 	docker stop $(IMAGE_NAME) || true
 	docker rm $(IMAGE_NAME) || true
