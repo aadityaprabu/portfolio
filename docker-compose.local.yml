@@ -13,10 +13,15 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    environment:
+      - ENV=$ENV
+      - REDIS_HOST=$REDIS_HOST
+      - REDIS_PORT=$REDIS_PORT
+      - REDIS_PASSWORD=$REDIS_PASSWORD
+      - BACKEND_PORT=$BACKEND_PORT
+      - BACKEND_GROQ_API_KEY=$BACKEND_GROQ_API_KEY
     image: portfolio-backend
     container_name: portfolio-backend-local
-    env_file:
-      - ./.env.local
     ports:
       - "3000:3000"
     networks:
@@ -31,10 +36,12 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
+      args:
+        - VITE_BACKEND_URL
+        - VITE_BASE_URL
+        - VITE_PORT
     image: portfolio-frontend
     container_name: portfolio-frontend-local
-    env_file:
-      - ./.env.local
     ports:
       - "3001:3001"
     volumes:

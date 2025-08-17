@@ -3,6 +3,13 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+    environment:
+      - ENV=$ENV
+      - REDIS_HOST=$REDIS_HOST
+      - REDIS_PORT=$REDIS_PORT
+      - REDIS_PASSWORD=$REDIS_PASSWORD
+      - BACKEND_PORT=$BACKEND_PORT
+      - BACKEND_GROQ_API_KEY=$BACKEND_GROQ_API_KEY
     image: portfolio-backend
     container_name: portfolio-backend-prod
     ports:
@@ -17,9 +24,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        VITE_BACKEND_URL: ${VITE_BACKEND_URL}
-        VITE_BASE_URL: ${VITE_BASE_URL}
-        VITE_PORT: ${VITE_PORT}
+        - VITE_BACKEND_URL
+        - VITE_BASE_URL
+        - VITE_PORT
     image: portfolio-frontend
     container_name: portfolio-frontend-prod
     ports:
