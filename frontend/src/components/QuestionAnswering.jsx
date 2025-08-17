@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react";
 export default function QuestionAnswering() {
   const [answer, setAnswer] = useState(0);
   useEffect(() => {
+    console.log(
+      "Fetching answer from:",
+      import.meta.env.VITE_BACKEND_URL + "/ping"
+    );
     const url = import.meta.env.VITE_BACKEND_URL + "/ping";
     fetch(url)
       .then((response) => {
