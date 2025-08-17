@@ -13,8 +13,7 @@ const app = express();
 app.set("trust proxy", true);
 app.use(express.json());
 
-app.use(rateLimiterMiddleware);
-app.post("/chat", async (req, res) => {
+app.post("/chat", rateLimiterMiddleware, async (req, res) => {
   try {
     const body = req.body;
     const message = {
@@ -27,6 +26,10 @@ app.post("/chat", async (req, res) => {
     console.error("Error in chat controller:", error);
     res.status(500).json({ error: "Internal server error" });
   }
+});
+
+app.get("/ping", (req, res) => {
+  res.json({ message: "pong" });
 });
 
 app.listen(port, () => {
