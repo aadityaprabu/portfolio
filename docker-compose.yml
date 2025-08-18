@@ -1,4 +1,14 @@
 services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis-local
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    networks:
+      - portfolio
   backend:
     build:
       context: ./backend
@@ -12,13 +22,16 @@ services:
       - BACKEND_GROQ_API_KEY=$BACKEND_GROQ_API_KEY
       - BACKEND_GROQ_API_URL=$BACKEND_GROQ_API_URL
     image: portfolio-backend
-    container_name: portfolio-backend-prod
+    container_name: portfolio-backend-local
     ports:
       - "3000:3000"
     networks:
       - portfolio
+    depends_on:
+      - redis
     volumes:
       - ./backend:/usr/src/app
+    restart: unless-stopped
 
   frontend:
     build:
@@ -30,9 +43,8 @@ services:
         - VITE_PORT
         - VITE_MAX_CHAT_HISTORY_LIMIT
         - VITE_MAX_CHAT_CHARACTERS
-
     image: portfolio-frontend
-    container_name: portfolio-frontend-prod
+    container_name: portfolio-frontend-local
     ports:
       - "3001:3001"
     volumes:
@@ -41,6 +53,11 @@ services:
       - portfolio
     depends_on:
       - backend
+
+volumes:
+  redis-data:
+    driver: local
+
 networks:
   portfolio:
     driver: bridge
