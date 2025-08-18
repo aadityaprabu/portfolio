@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-export default function PersonalInfo({ personal }) {
-  if (!personal) return <div>Loading personal info...</div>;
+const Personal = ({ personal }) => {
+  if (!personal) return <div>No personal information available.</div>;
 
   const { fullName, tagline, location, email, website, social } = personal;
 
@@ -50,4 +50,6 @@ export default function PersonalInfo({ personal }) {
       </div>
     </section>
   );
-}
+};
+
+export default Personal;

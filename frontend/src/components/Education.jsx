@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Education({ education }) {
+const Education = ({ education }) => {
   if (!education || education.length === 0) {
     return <p>No education data available.</p>;
   }
@@ -43,4 +43,5 @@ export default function Education({ education }) {
       ))}
     </section>
   );
-}
+};
+export default Education;

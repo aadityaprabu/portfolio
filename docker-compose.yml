@@ -10,6 +10,7 @@ services:
       - REDIS_PASSWORD=$REDIS_PASSWORD
       - BACKEND_PORT=$BACKEND_PORT
       - BACKEND_GROQ_API_KEY=$BACKEND_GROQ_API_KEY
+      - BACKEND_GROQ_API_URL=$BACKEND_GROQ_API_URL
     image: portfolio-backend
     container_name: portfolio-backend-prod
     ports:
@@ -27,6 +28,9 @@ services:
         - VITE_BACKEND_URL
         - VITE_BASE_URL
         - VITE_PORT
+        - VITE_MAX_CHAT_HISTORY_LIMIT
+        - VITE_MAX_CHAT_CHARACTERS
+
     image: portfolio-frontend
     container_name: portfolio-frontend-prod
     ports:

@@ -4,7 +4,7 @@
     "tagline": "Aspiring Developer | Artist | Innovator",
     "location": "Chennai, India",
     "email": "aaditya.prabu@gmail.com",
-    "website": "https://aadityaprabu.github.io",
+    "website": "https://portfolio.aadityaprabu.in",
     "social": {
       "github": "https://github.com/Aadityaprabu002",
       "linkedin": "https://www.linkedin.com/in/aaditya-prabu-k",
@@ -100,7 +100,7 @@
       "level": "High School"
     }
   ],
-  "positionsOfResponsibilities": [
+  "positionsOfResponsibility": [
     {
       "role": "Head of events",
       "organization": "Anna University Student Entrepreneurship Club",
@@ -143,10 +143,5 @@
       "dateStart": "2018-01",
       "dateEnd": "2020-01"
     }
-  ],
-  "wittyFallbacks": {
-    "publications": "Currently brewing ideas hotter than my coffee — papers coming soon.",
-    "youtube": "No channel yet, but I promise my videos will have fewer ads than YouTube Premium.",
-    "missingData": "Either I haven't done it yet, or it's so classified even the LLM can't access it."
-  }
+  ]
 }
