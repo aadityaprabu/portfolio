@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Welcome from "./Welcome";
 import Education from "./Education";
 import Work from "./Work";
 import Resume from "./Resume";
@@ -8,14 +7,6 @@ import Project from "./Project";
 import Welcome from "./Welcome";
 
 function ContentView({ portfolio, setIsCanvasLoaded }) {
-  const personal = {
-    social: {
-      github: "https://github.com/aadityaprabu",
-      linkedin: "https://www.linkedin.com/in/aadityaprabu/",
-      instagram: "https://instagram.com/aadityaprabu",
-    },
-  };
-
   return (
     <main>
       <Routes>
@@ -23,7 +14,7 @@ function ContentView({ portfolio, setIsCanvasLoaded }) {
           path="/"
           element={
             <Welcome
-              personal={personal}
+              personal={portfolio?.personal}
               setIsCanvasLoaded={setIsCanvasLoaded}
             />
           }
