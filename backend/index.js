@@ -40,7 +40,7 @@ app.post("/chat", rateLimiterMiddleware, async (req, res) => {
     const body = req.body;
     const chatHistory = body.chatHistory;
     const message = body.message;
-
+    
     const reply = await groqService(chatHistory, message);
 
     const successResponse = response.success(

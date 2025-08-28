@@ -1,0 +1,15 @@
+:root {
+  --primary: #ff6060;
+  --background: #ffffff;
+  --text: #ff6060;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.app {
+  text-align: center;
+  color: var(--text);
+}

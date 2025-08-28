@@ -2,17 +2,17 @@
   "redis": {
     "rateLimiters": {
       "ipRateLimiter": {
-        "points": 10,
+        "points": 5,
         "duration": 86400,
         "blockDuration": 86400
       },
       "ipUaRateLimiter": {
-        "points": 10,
+        "points": 5,
         "duration": 86400,
         "blockDuration": 86400
       },
       "visitorIdRateLimiter": {
-        "points": 10,
+        "points": 5,
         "duration": 86400,
         "blockDuration": 86400
       }

@@ -1,32 +1,25 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import Personal from "./components/Personal";
-import Education from "./components/Education";
-import ChatComponent from "./components/Chat";
-import FingerprintJS from "@fingerprintjs/fingerprintjs";
+import "./theme.css";
+import Title from "./components/Title";
+import Navbar from "./components/Navbar";
+import ContentView from "./components/ContentView";
+import { BrowserRouter as Router } from "react-router-dom";
+import { useState, useEffect } from "react";
 import backendApi from "./utils/backendApi";
-import Internships from "./components/Internships";
-import WorkExperience from "./components/WorkExperience";
-import PositionsOfResponsibility from "./components/PositionsOfResponsibility";
-import Achievements from "./components/Achievements";
-
-const basePath = import.meta.env.BASE_URL;
-
 function App() {
-  const [portfolio, setPortfolio] = useState(0);
-
+  const [portfolio, setPortfolio] = useState(null);
+  const [isCanvasLoaded, setIsCanvasLoaded] = useState(false);
   useEffect(() => {
-    const loadPortfolioData = async () => {
+    const fetchPortfolio = async () => {
       const response = await backendApi.get("/portfolio");
       if (response.status === "success") {
         setPortfolio(response.data);
       } else {
-        console.error("Error loading portfolio data:", response.message);
+        console.error("Error fetching portfolio data:", response.message);
       }
     };
-    loadPortfolioData();
+    fetchPortfolio();
   }, []);
-
   useEffect(() => {
     const initFingerprint = async () => {
       try {
@@ -44,22 +37,29 @@ function App() {
     };
     initFingerprint();
   }, []);
-  console.log(portfolio);
-  if (!portfolio) {
-    return <div>Loading...</div>;
-  }
   return (
-    <div>
-      <Personal personal={portfolio.personal} />
-      <Education education={portfolio.education} />
-      <Internships internships={portfolio.internships} />
-      <WorkExperience workExperience={portfolio.workExperience} />
-      <Achievements achievements={portfolio.achievements} />
-      <PositionsOfResponsibility
-        positionsOfResponsibility={portfolio.positionsOfResponsibility}
-      />
-      <ChatComponent canLoadChat={!!portfolio} />
+    <div className="app">
+      <>
+        <Title />
+        <Router>
+          <Navbar />
+
+          <ContentView
+            portfolio={portfolio}
+            setIsCanvasLoaded={setIsCanvasLoaded}
+          />
+        </Router>
+      </>
+      {!isCanvasLoaded && (
+        <div className="fixed inset-0 flex items-center justify-center bg-white/80 z-[9999]">
+          <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500 mb-6"></div>
+          <p className="text-2xl font-semibold text-blue-600">
+            Loading your avatar and animations...
+          </p>
+        </div>
+      )}
     </div>
   );
 }
+
 export default App;

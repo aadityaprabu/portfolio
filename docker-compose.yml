@@ -21,6 +21,7 @@ services:
       - BACKEND_PORT=$BACKEND_PORT
       - BACKEND_GROQ_API_KEY=$BACKEND_GROQ_API_KEY
       - BACKEND_GROQ_API_URL=$BACKEND_GROQ_API_URL
+      - BACKEND_MAX_CHAT_CHARACTERS=$BACKEND_MAX_CHAT_CHARACTERS
     image: portfolio-backend
     container_name: portfolio-backend-local
     ports:

@@ -15,6 +15,7 @@
   "education": [
     {
       "level": "High School",
+      "degree": "Computer Mathematics",
       "board": "CBSE",
       "institution": "Srimathi Sundaravalli Memorial School, Chromepet",
       "location": "Chennai, India",
@@ -32,8 +33,7 @@
       "cgpa": "8.49"
     }
   ],
-
-  "internships": [
+  "internship": [
     {
       "title": "Application Developer Intern",
       "company": "IDFC FIRST Bank Limited",
@@ -51,7 +51,7 @@
       "description": "Developed a cross-platform mobile application using Ionic Angular, enabling users to seamlessly retrieve and view real-time sunrise and sunset timings based on their current or selected location."
     }
   ],
-  "workExperience": [
+  "work": [
     {
       "title": "Application Developer",
       "company": "IDFC FIRST Bank Limited",
@@ -62,7 +62,7 @@
       "description": "Currently working on Project Optimus, a web and mobile banking application, with a focus on building rule engines, and tracking and blocking malicious activities to enhance system security. Developing machine learning systems to detect anomalies in customer behavior, automating scripts for generating daily and monthly rule breach reports, archiving data from mongo to S3, and creating proof of concepts to introduce and validate new ideas. Current tech stack: Python, ReactJS, NodeJS, AWS, Golang."
     }
   ],
-  "achievements": [
+  "achievement": [
     {
       "title": "Representation of IT Department for NAAC evaluation",
       "category": "Academic",
@@ -142,6 +142,49 @@
       "description": "To charge of making artwork, organizing, decorating school events",
       "dateStart": "2018-01",
       "dateEnd": "2020-01"
+    }
+  ],
+  "project": [
+    {
+      "title": "Newspaper Visual Question and Answering",
+      "description": "Objective: To develop an end-to-end Retrieval-Augmented Generation application that efficiently searches a vector knowledge database of e-newspapers and fetches the best matching articles related to the prompted question. It uses YOLOv8 to segment the newspaper into individual entities, OCR to extract the content, a vector database to store the content, and a Sentence Transformer (all-MiniLM-L6-v2) to find the best match for the question within the knowledge database. It also includes a feedback mechanism that suggests previously asked similar questions and their related articles to users, enhancing user experience and accuracy of 41.96%.",
+      "dateStart": "2023-08",
+      "dateEnd": "2024-06",
+      "toolsAndTechnology": "React, Python, Hugging Face, SQLite 3, ChromaDB, Roboflow, Tesseract OCR",
+      "githubLink": [
+        "https://github.com/Aadityaprabu002/src_nqa_frontend",
+        "https://github.com/Aadityaprabu002/src_nqa_backend"
+      ],
+      "demoLink": "https://drive.google.com/file/d/1cEMQvybHOYXVpOJnJGBdeyYsIXq9hvcP/view?usp=sharing"
+    },
+    {
+      "title": "Attendance System",
+      "description": "Objective: To develop an online attendance system that integrates face detection to verify a student’s presence via webcam when they submit their attendance photo, allowing lecturers to cross-check submissions with registered photos for authentication. It includes multiple attendance submissions for students at random intervals during the lecture. IT Department lecturers found this very innovative and helpful.",
+      "dateStart": "2021-11",
+      "dateEnd": "2022-01",
+      "toolsAndTechnology": "Javascript, HTML/CSS, Bootstrap, Go Lang, PostgreSQL, pg Agent, FaceDetection.js",
+      "githubLink": ["https://github.com/Aadityaprabu002/Attendance-System"],
+      "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhUsFFMXJ8afSK5ZLtYU2Yb6"
+    },
+    {
+      "title": "Student Performance Prediction and Analysis",
+      "description": "Objective: To analyze the Open University Learning Analytics dataset to understand student performance and dropout patterns using clustering algorithms and data mining techniques. Predicted student performance using various supervised machine learning models and the most efficient and accurate model was Artificial Neural Networks, which had a 90% accuracy score.",
+      "dateStart": "2022-07",
+      "dateEnd": "2022-09",
+      "toolsAndTechnology": "Python, Scikit-learn, Pandas, Numpy, Matplotlib, Seaborn",
+      "githubLink": [
+        "https://github.com/Aadityaprabu002/Student-Performance-Prediction-and-Analysis"
+      ],
+      "demoLink": ""
+    },
+    {
+      "title": "AR-Tutor",
+      "description": "Objective: To develop an AR application that tracks human pose coordinates using a webcam, streams the data in real time, and uses a smartphone to receive the stream and augment a coordinate-mapped 3D human model onto a real-world plane surface. It utilizes multi-threading to broadcast the coordinates and receive the coordinates at different processing speeds, which is bridged by a buffer queue. AR Tutor was selected for representing IT Department for NAAC evaluation.",
+      "dateStart": "2023-03",
+      "dateEnd": "2023-05",
+      "toolsAndTechnology": "Python, Socket Programming, C#, Unity AR/VR, Media Pipe Pose Tracking Library, Threads",
+      "githubLink": ["https://github.com/Aadityaprabu002/ARTutor"],
+      "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhXjcgWnek1wSJLmZKr1x8f1"
     }
   ]
 }
