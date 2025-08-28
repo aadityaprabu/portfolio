@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import ContentView from "./components/ContentView";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useState, useEffect } from "react";
+import FingerprintJS from "@fingerprintjs/fingerprintjs";
 import backendApi from "./utils/backendApi";
 function App() {
   const [portfolio, setPortfolio] = useState(null);
@@ -25,6 +26,7 @@ function App() {
       try {
         const fp = await FingerprintJS.load();
         const result = await fp.get();
+        console.log(result.visitorId);
         const headers = { "Content-Type": "application/json" };
         const data = {
           visitorId: result.visitorId,
