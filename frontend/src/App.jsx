@@ -42,9 +42,9 @@ function App() {
   return (
     <div className="app">
       <>
-        <Title />
+        <Title personal={portfolio?.personal} />
         <Router>
-          <Navbar />
+          <Navbar isCanvasLoaded={isCanvasLoaded} />
 
           <ContentView
             portfolio={portfolio}

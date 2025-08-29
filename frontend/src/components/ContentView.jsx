@@ -5,7 +5,6 @@ import Work from "./Work";
 import Resume from "./Resume";
 import Project from "./Project";
 import Welcome from "./Welcome";
-
 function ContentView({ portfolio, setIsCanvasLoaded }) {
   return (
     <main>

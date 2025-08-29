@@ -8,6 +8,8 @@ import { Canvas } from "@react-three/fiber";
 import Experience from "./Experience";
 import ChatBox from "./ChatBox";
 const Welcome = ({ personal, setIsCanvasLoaded }) => {
+  console.log("Welcome");
+
   const { github, linkedin, instagram } = personal?.social || {};
   const rootRef = useRef();
   const experienceDivRef = useRef();
@@ -115,10 +117,8 @@ const Welcome = ({ personal, setIsCanvasLoaded }) => {
             Hi,
           </h2>
           <p className="mb-4 text-lg md:text-2xl italic font-light md:text-left text-center text-[var(--primary)]">
-            "i'm an aspiring developer, artist, and innovator from Chennai. I'm
-            passionate about blending creativity and technology to build
-            meaningful experiences, whether through code, design, or art. Always
-            curious, always experimenting — I love turning ideas into reality."
+            {personal?.bio ||
+              "I'm an aspiring developer, artist, and innovator from Chennai. I'm passionate about blending creativity and technology to build meaningful experiences, whether through code, design, or art. Always curious, always experimenting — I love turning ideas into reality."}
           </p>
           <div className="flex flex-row justify-center md:justify-start gap-4 md:gap-6 mb-4">
             <a
@@ -192,6 +192,13 @@ const Welcome = ({ personal, setIsCanvasLoaded }) => {
                 <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
               </svg>
             </a>
+            <a
+              href={`mailto:${personal?.email}`}
+              className="focus:outline-none text-[var(--primary)] text-lg font-semibold"
+              style={{ pointerEvents: "auto" }}
+            >
+              {personal?.email}
+            </a>
           </div>
           <p className="text-lg md:text-2xl font-semibold md:text-left text-center mt-4 animate-bounce text-[var(--primary)]">
             Scroll down to chat with my AI personal assistant!
@@ -235,7 +242,6 @@ const Welcome = ({ personal, setIsCanvasLoaded }) => {
         </section>
       )}
 
-      {/* Mobile Canvas Section: appears after welcome section */}
       {isMobile && (
         <section
           ref={canvasSectionRef}
@@ -274,7 +280,7 @@ const Welcome = ({ personal, setIsCanvasLoaded }) => {
           height: isMobile ? "auto" : "100vh",
           position: "relative",
           zIndex: 5,
-          paddingBottom: isMobile ? "2rem" : "auto",
+          paddingBottom: isMobile ? "9rem" : "auto",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

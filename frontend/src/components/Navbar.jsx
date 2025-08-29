@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ isCanvasLoaded }) {
+  console.log("Loading Navbar");
+
+  if (!isCanvasLoaded && location.pathname !== "/") {
+    return <Navigate to="/" replace />;
+  }
   return (
     <nav className="navbar bg-transparent flex justify-center">
       <ul className="flex space-x-4 p-4 bg-transparent text-[var(--primary)] justify-center">

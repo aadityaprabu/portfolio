@@ -25,40 +25,6 @@ const Loading = () => (
   </div>
 );
 
-// const workData = {
-//   internships: [
-//     {
-//       title: "Application Developer Intern",
-//       company: "IDFC FIRST Bank Limited",
-//       location: "Chennai, India",
-//       dateStart: "2024-01",
-//       dateEnd: "2024-06",
-//       description:
-//         "Gained hands-on experience in test-driven development with Golang and ReactJS. Participated in simulated team meetings and discussions, conducted seminars, and led knowledge transfer and brain refresher sessions. Contributed to the development of an anomaly detection system for identifying potential fraudulent transactions using clustering and decision tree-based machine learning models.",
-//     },
-//     {
-//       title: "Application Developer Intern",
-//       company: "Pavartha Software Private Limited",
-//       location: "Chennai, India",
-//       dateStart: "2023-06",
-//       dateEnd: "2023-07",
-//       description:
-//         "Developed a cross-platform mobile application using Ionic Angular, enabling users to seamlessly retrieve and view real-time sunrise and sunset timings based on their current or selected location.",
-//     },
-//   ],
-//   workExperience: [
-//     {
-//       title: "Application Developer",
-//       company: "IDFC FIRST Bank Limited",
-//       squad: "Fraud Risk Management",
-//       location: "Chennai, India",
-//       dateStart: "2024-07",
-//       dateEnd: "Present",
-//       description:
-//         "Currently working on Project Optimus, a web and mobile banking application, with a focus on building rule engines, and tracking and blocking malicious activities to enhance system security. Developing machine learning systems to detect anomalies in customer behavior, automating scripts for generating daily and monthly rule breach reports, archiving data from mongo to S3, and creating proof of concepts to introduce and validate new ideas. Current tech stack: Python, ReactJS, NodeJS, AWS, Golang.",
-//     },
-//   ],
-// };
 const TimelineItem = ({ item, type }) => {
   return (
     <div className="relative mb-10 pl-8">
@@ -81,7 +47,7 @@ const TimelineItem = ({ item, type }) => {
         <div className="text-lg text-gray-500 mb-1 text-left">
           {item.squad ? `${item.squad} ` : ""}
         </div>
-        <div className="text-base text-gray-800 w-full block pl-0 text-left">
+        <div className="text-base text-gray-800 block pl-0 w-full text-justify">
           {item.description}
         </div>
       </div>
