@@ -40,7 +40,7 @@ app.post("/chat", rateLimiterMiddleware, async (req, res) => {
     const body = req.body;
     const chatHistory = body.chatHistory;
     const message = body.message;
-    
+
     const reply = await groqService(chatHistory, message);
 
     const successResponse = response.success(
@@ -79,6 +79,9 @@ app.post("/set-fingerprint-id", async (req, res) => {
 app.get("/ping", (req, res) => {
   const successResponse = response.success(null, "pong", 200);
   res.json(successResponse);
+});
+app.get("/healthz", (req, res) => {
+  res.status(200).send("OK");
 });
 
 app.listen(port, () => {
