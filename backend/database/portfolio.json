@@ -186,6 +186,18 @@
       "toolsAndTechnology": "Python, Socket Programming, C#, Unity AR/VR, Media Pipe Pose Tracking Library, Threads",
       "githubLink": ["https://github.com/Aadityaprabu002/ARTutor"],
       "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhXjcgWnek1wSJLmZKr1x8f1"
+    },
+    {
+      "title": "AR Learning App – From 3D to 2D Shapes",
+      "description": "Objective: To develop an Augmented Reality (AR) application that helps second-grade students understand the relationship between 3D objects and their 2D projections. Inspired by the Tamil Nadu SCERT Grade 2 Mathematics textbook, the app spawns a virtual AR classroom where children can explore shapes like cubes, cuboids, cones, cylinders, and spheres, and see how 2D shapes emerge from them through impressions, shadows, and transformations.",
+      "dateStart": "2022-10",
+      "dateEnd": "2023-01",
+      "toolsAndTechnology": "Unity3D, C#, Unity AR Foundation, Plane Tracking, Vuforia",
+      "githubLink": [
+        "https://github.com/Aadityaprabu002/AR-Enabled-3d-To-2d-Shapes"
+      ],
+      "demoLink": "https://youtu.be/DhizjEYkZk4",
+      "downloadLink": "https://drive.google.com/drive/folders/1hYahx9r3Wx-NYJZ2otBk0LZwp2OgwEiM?usp=sharing"
     }
   ]
 }
