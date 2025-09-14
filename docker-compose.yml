@@ -9,6 +9,12 @@ services:
     restart: unless-stopped
     networks:
       - portfolio
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
   backend:
     build:
       context: ./backend
@@ -32,8 +38,13 @@ services:
       - redis
     volumes:
       - ./backend:/usr/src/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
     restart: unless-stopped
-
   frontend:
     build:
       context: ./frontend
@@ -54,6 +65,12 @@ services:
       - portfolio
     depends_on:
       - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
 
 volumes:
   redis-data:
