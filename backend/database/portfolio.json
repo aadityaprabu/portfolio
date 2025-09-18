@@ -7,7 +7,7 @@
     "bio": "I'm an aspiring developer, artist, and innovator from Chennai. I'm passionate about blending creativity and technology to build meaningful experiences, whether through code, design, or art. Always curious, always experimenting — I love turning ideas into reality.",
     "website": "https://portfolio.aadityaprabu.in",
     "social": {
-      "github": "https://github.com/Aadityaprabu002",
+      "github": "https://github.com/aadityaprabu",
       "linkedin": "https://www.linkedin.com/in/aaditya-prabu-k",
       "instagram": "https://www.instagram.com/aadi_try_art",
       "youtube": null
@@ -153,8 +153,8 @@
       "dateEnd": "2024-06",
       "toolsAndTechnology": "React, Python, Hugging Face, SQLite 3, ChromaDB, Roboflow, Tesseract OCR",
       "githubLink": [
-        "https://github.com/Aadityaprabu002/src_nqa_frontend",
-        "https://github.com/Aadityaprabu002/src_nqa_backend"
+        "https://github.com/aadityaprabu/src_nqa_frontend",
+        "https://github.com/aadityaprabu/src_nqa_backend"
       ],
       "demoLink": "https://drive.google.com/file/d/1cEMQvybHOYXVpOJnJGBdeyYsIXq9hvcP/view?usp=sharing"
     },
@@ -164,7 +164,7 @@
       "dateStart": "2021-11",
       "dateEnd": "2022-01",
       "toolsAndTechnology": "Javascript, HTML/CSS, Bootstrap, Go Lang, PostgreSQL, pg Agent, FaceDetection.js",
-      "githubLink": ["https://github.com/Aadityaprabu002/Attendance-System"],
+      "githubLink": ["https://github.com/aadityaprabu/Attendance-System"],
       "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhUsFFMXJ8afSK5ZLtYU2Yb6"
     },
     {
@@ -174,7 +174,7 @@
       "dateEnd": "2022-09",
       "toolsAndTechnology": "Python, Scikit-learn, Pandas, Numpy, Matplotlib, Seaborn",
       "githubLink": [
-        "https://github.com/Aadityaprabu002/Student-Performance-Prediction-and-Analysis"
+        "https://github.com/aadityaprabu/Student-Performance-Prediction-and-Analysis"
       ],
       "demoLink": ""
     },
@@ -184,7 +184,7 @@
       "dateStart": "2023-03",
       "dateEnd": "2023-05",
       "toolsAndTechnology": "Python, Socket Programming, C#, Unity AR/VR, Media Pipe Pose Tracking Library, Threads",
-      "githubLink": ["https://github.com/Aadityaprabu002/ARTutor"],
+      "githubLink": ["https://github.com/aadityaprabu/ARTutor"],
       "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhXjcgWnek1wSJLmZKr1x8f1"
     },
     {
@@ -194,7 +194,7 @@
       "dateEnd": "2023-01",
       "toolsAndTechnology": "Unity3D, C#, Unity AR Foundation, Plane Tracking, Vuforia",
       "githubLink": [
-        "https://github.com/Aadityaprabu002/AR-Learning-App-From-3D-to-2D-Shapes"
+        "https://github.com/aadityaprabu/AR-Learning-App-From-3D-to-2D-Shapes"
       ],
       "demoLink": "https://youtu.be/DhizjEYkZk4",
       "downloadLink": "https://drive.google.com/drive/folders/1hYahx9r3Wx-NYJZ2otBk0LZwp2OgwEiM?usp=sharing"
