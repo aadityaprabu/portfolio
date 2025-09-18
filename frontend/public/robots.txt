@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block crawling of sensitive or unnecessary files
+Disallow: /admin
+Disallow: /private
+Disallow: /tmp
+
+Sitemap: https://portfolio.aadityaprabu.in/sitemap.xml
