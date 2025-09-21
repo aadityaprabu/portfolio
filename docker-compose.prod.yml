@@ -1,0 +1,73 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis-local
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - ENV=$ENV
+      - REDIS_HOST=$REDIS_HOST
+      - REDIS_PORT=$REDIS_PORT
+      - REDIS_PASSWORD=$REDIS_PASSWORD
+      - BACKEND_PORT=$BACKEND_PORT
+      - BACKEND_GROQ_API_KEY=$BACKEND_GROQ_API_KEY
+      - BACKEND_GROQ_API_URL=$BACKEND_GROQ_API_URL
+      - BACKEND_MAX_CHAT_CHARACTERS=$BACKEND_MAX_CHAT_CHARACTERS
+    image: portfolio-backend
+    container_name: portfolio-backend-local
+    ports:
+      - "3000:3000"
+
+    depends_on:
+      - redis
+    volumes:
+      - ./backend:/usr/src/app
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+    restart: unless-stopped
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        - VITE_BACKEND_URL
+        - VITE_BASE_URL
+        - VITE_PORT
+        - VITE_MAX_CHAT_HISTORY_LIMIT
+        - VITE_MAX_CHAT_CHARACTERS
+    image: portfolio-frontend
+    container_name: portfolio-frontend-local
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./frontend:/usr/src/app
+
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  redis-data:
+    driver: local
