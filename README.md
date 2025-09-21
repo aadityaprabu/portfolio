@@ -36,7 +36,8 @@ This isn’t just another portfolio — it blends **3D graphics, smooth animatio
 
 ### ☁️ Hosting & Deployment
 - **Hostinger VPS** for server hosting  
-- **Domain management** via Hostinger (portfolio.aadityaprabu.in)  
-- **Deployment** automated using [Coolify](https://coolify.io/), an open-source self-hosting platform  
+- **Domain management** via Hostinger (portfolio.aadityaprabu.in)
+- **Docker** for deployment
+- **Deployment** automated using [Coolify](https://coolify.io/), an open-source self-hosting platform with in built **CICD** pipelines  
 
 ---
