@@ -202,8 +202,8 @@
     {
       "title": "2D Infinite Runner Game",
       "description": "Objective: To design and implement a tile-based endless runner game using Python's Pygame module. The player controls a cowboy character who must continuously run, jump, and slide to avoid obstacles such as bats and crates. The game keeps track of the distance covered, displays a score upon collision, and restarts for continuous gameplay. It was built as a fun project to explore game development with Python.",
-      "dateStart": "2022-01",
-      "dateEnd": "2022-02",
+      "dateStart": "2020-11",
+      "dateEnd": "2020-11",
       "toolsAndTechnology": "Python, Pygame, Computer Graphics, Event Handling",
       "githubLink": ["https://github.com/aadityaprabu/2d-infinite-runner-game"],
       "demoLink": null
