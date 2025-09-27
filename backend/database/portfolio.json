@@ -164,7 +164,7 @@
       "dateStart": "2021-11",
       "dateEnd": "2022-01",
       "toolsAndTechnology": "Javascript, HTML/CSS, Bootstrap, Go Lang, PostgreSQL, pg Agent, FaceDetection.js",
-      "githubLink": ["https://github.com/aadityaprabu/Attendance-System"],
+      "githubLink": ["https://github.com/aadityaprabu/attendance-system"],
       "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhUsFFMXJ8afSK5ZLtYU2Yb6"
     },
     {
@@ -174,17 +174,17 @@
       "dateEnd": "2022-09",
       "toolsAndTechnology": "Python, Scikit-learn, Pandas, Numpy, Matplotlib, Seaborn",
       "githubLink": [
-        "https://github.com/aadityaprabu/Student-Performance-Prediction-and-Analysis"
+        "https://github.com/aadityaprabu/student-performance-prediction-and-analysis"
       ],
       "demoLink": ""
     },
     {
-      "title": "AR-Tutor",
+      "title": "ARTutor",
       "description": "Objective: To develop an AR application that tracks human pose coordinates using a webcam, streams the data in real time, and uses a smartphone to receive the stream and augment a coordinate-mapped 3D human model onto a real-world plane surface. It utilizes multi-threading to broadcast the coordinates and receive the coordinates at different processing speeds, which is bridged by a buffer queue. AR Tutor was selected for representing IT Department for NAAC evaluation.",
       "dateStart": "2023-03",
       "dateEnd": "2023-05",
       "toolsAndTechnology": "Python, Socket Programming, C#, Unity AR/VR, Media Pipe Pose Tracking Library, Threads",
-      "githubLink": ["https://github.com/aadityaprabu/ARTutor"],
+      "githubLink": ["https://github.com/aadityaprabu/ar-tutor"],
       "demoLink": "https://www.youtube.com/playlist?list=PLCk1Y31wvMhXjcgWnek1wSJLmZKr1x8f1"
     },
     {
@@ -194,10 +194,28 @@
       "dateEnd": "2023-01",
       "toolsAndTechnology": "Unity3D, C#, Unity AR Foundation, Plane Tracking, Vuforia",
       "githubLink": [
-        "https://github.com/aadityaprabu/AR-Learning-App-From-3D-to-2D-Shapes"
+        "https://github.com/aadityaprabu/ar-learning-app-from-3d-to-2d-shapes"
       ],
       "demoLink": "https://youtu.be/DhizjEYkZk4",
       "downloadLink": "https://drive.google.com/drive/folders/1hYahx9r3Wx-NYJZ2otBk0LZwp2OgwEiM?usp=sharing"
+    },
+    {
+      "title": "2D Infinite Runner Game",
+      "description": "Objective: To design and implement a tile-based endless runner game using Python's Pygame module. The player controls a cowboy character who must continuously run, jump, and slide to avoid obstacles such as bats and crates. The game keeps track of the distance covered, displays a score upon collision, and restarts for continuous gameplay. It was built as a fun project to explore game development with Python.",
+      "dateStart": "2022-01",
+      "dateEnd": "2022-02",
+      "toolsAndTechnology": "Python, Pygame, Computer Graphics, Event Handling",
+      "githubLink": ["https://github.com/aadityaprabu/2d-infinite-runner-game"],
+      "demoLink": null
+    },
+    {
+      "title": "Code to DOCX",
+      "description": "Objective: To create a Python-based automation tool that compiles source code files and their corresponding output screenshots into a structured Microsoft Word (.docx) document. This system is especially useful for students preparing coding assignments or documentation. It supports multiple programming languages, allows including or excluding code, and organizes content using folder-based workflows.",
+      "dateStart": "2021-01",
+      "dateEnd": "2021-02",
+      "toolsAndTechnology": "Python, python-docx, File Handling, Automation",
+      "githubLink": ["https://github.com/aadityaprabu/code-to-docx"],
+      "demoLink": null
     }
   ]
 }
