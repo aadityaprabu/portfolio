@@ -201,7 +201,7 @@ const Welcome = ({ personal, setIsCanvasLoaded }) => {
             </a>
           </div>
           <p className="text-lg md:text-2xl font-semibold md:text-left text-center mt-4 animate-bounce text-[var(--primary)]">
-            Scroll down to chat with my AI personal assistant!
+            Scroll down till the last to chat with my AI personal assistant!
           </p>
         </div>
       </section>
